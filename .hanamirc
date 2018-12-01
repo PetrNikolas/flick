@@ -1,0 +1,3 @@
+project=flick
+test=rspec
+template=erb
