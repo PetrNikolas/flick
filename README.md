@@ -8,11 +8,8 @@ Flick is a fullstack development platform to generate, develop and deploy web ap
 * [Setup](#setup)
 * [Resources](#resources)
 * [Project Setup](#project-setup)
-* [GraphQL API playground](#graphql-api-playground)
-* [Tools](#tools)
 * [Deployment](#deployment)
 * [Docker](#docker)
-* [Pry initializer](#pry-initializer)
 * [Test API with Postman](#test-api-with-postman)
 
 ## Prerequisites
@@ -54,27 +51,9 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
 4. Run `bundle exec hanami server`
 5. Visit --> [http://localhost:2300/](http://localhost:2300/). That's it!.
 
-## GraphQL API playground
-* Open `http://localhost:5000/graphiql` and play with GraphQL.
-
-## Tools
-* Run `rubocop` for Ruby lint.
-* Run `rubocop -a` for fixed some issues automatically.
-* Run `reek .` for analyzing code.
-* Run `fasterer` for code analyzer.
-* Run `bundle audit` for audito your bundle.
-* Run `brakeman` for static analysis and for security vulnerabilities.
-* Run `rails_best_practices .` in root app directory. Helps to find unused methods, missing indexes into database tables and many other things.
-
 ## Deployment
 * Mainly for Heroku hosting.
 * See [documentation](./DEPLOYMENT.md).
-
-### Gitlab CI
-* You need configure `.gitlab-ci.yml` file with your Heroku credentials.
-
-### Travis CI
-* You need configure `.travis.yml` file with your Travis and Heroku credentials.
 
 ## Docker
 * Basic configuration of Docker image is in Dockerfile and docker-compose.yml files in root of project.
@@ -102,12 +81,6 @@ $ docker-compose run SERVICE [COMMAND]
 # Rebuilding a Docker Image:
 $ docker-compose build [SERVICE...]
 ```
-
-## Pry initializer
-Avoid repeating yourself, use pry-rails instead of copying the initializer to every rails project.
-* Run `rails console` and in Rails console:
-* For showing models --> `show-models`.
-* For showing routes --> `show-routes`.
 
 ## Test API with Postman
 ### GraphQL
