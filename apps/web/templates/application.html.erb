@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web</title>
+    <title>Flick - Web</title>
+
+    <meta charset="utf-8">
+    <link rel="canonical" href="">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <!-- Meta Tags-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="Petr Nikolas">
+    <meta http-equiv="Content-language" content="en">
+    <meta name='reply-to' content='hello@petrnikolas.com'>
+    <meta name='url' content=''>
+    <meta name='identifier-URL' content=''>
+
+    <!-- OG Meta tags -->
+    <meta property="og:title" content="Flick - Web">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+
+    <!-- Twitter Meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- MS Application -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="">
+
     <%= favicon %>
+
+    <%= stylesheet 'reset', 'main' %>
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
   </head>
   <body>
-    <%= yield %>
+
+    <%= render partial: 'shared/navbar' %>
+
+    <main>
+      <%= yield %>
+    </main>
+
   </body>
 </html>
