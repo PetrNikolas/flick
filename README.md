@@ -7,7 +7,6 @@ Flick is a fullstack development platform to generate, develop and deploy web ap
 * [Prerequisites](#prerequisites)
 * [Setup](#setup)
 * [Resources](#resources)
-* [Project Setup](#project-setup)
 * [Deployment](#deployment)
 * [Docker](#docker)
 * [Test API with Postman](#test-api-with-postman)
@@ -43,13 +42,6 @@ How to prepare (create and migrate) DB for `development` and `test` environments
 
 ## Resources
 Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.hanamirb.org/1.3.0/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸
-
-## Project Setup
-1. Clone or download this repo
-2. Run `bundle install`
-3. Run `bundle exec hanami db prepare`
-4. Run `bundle exec hanami server`
-5. Visit --> [http://localhost:2300/](http://localhost:2300/). That's it!.
 
 ## Deployment
 * Mainly for Heroku hosting.
