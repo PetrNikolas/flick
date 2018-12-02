@@ -121,6 +121,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     pg (1.1.3)
     public_suffix (3.0.3)
+    puma (3.12.0)
     rack (2.0.6)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -181,6 +182,7 @@ DEPENDENCIES
   hanami-model (~> 1.3)
   hanami-webconsole
   pg
+  puma
   rake
   rspec
   shotgun
