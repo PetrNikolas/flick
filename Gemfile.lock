@@ -47,6 +47,8 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bootsnap (1.4.5)
+      msgpack (~> 1.0)
     brakeman (4.7.2)
     builder (3.2.3)
     byebug (11.0.1)
@@ -83,6 +85,7 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.13.0)
+    msgpack (1.3.1)
     nio4r (2.5.2)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
@@ -93,6 +96,8 @@ GEM
     psych (3.1.0)
     puma (3.12.1)
     rack (2.0.7)
+    rack-cors (1.1.0)
+      rack (>= 2.0.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7.2)
@@ -183,11 +188,13 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bootsnap
   brakeman
   byebug
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.7, >= 5.0.7.2)
   rails_best_practices
   reek
