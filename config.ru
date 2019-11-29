@@ -1,3 +1,5 @@
-require './config/environment'
+# This file is used by Rack-based servers to start the application.
 
-run Hanami.app
+require_relative 'config/environment'
+
+run Rails.application

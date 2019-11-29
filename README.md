@@ -1,58 +1,81 @@
 # Flick
 
-Flick is a fullstack development platform to generate, develop and deploy web applications and microservices.
+Rails Versioned API starter template for hipsters!
 
 * Version 0.0.1
 
 ## Table of Contents
 
 * [Prerequisites](#prerequisites)
-* [Setup](#setup)
-* [Resources](#resources)
-* [Deployment](#deployment)
-* [Docker](#docker)
-* [Test API with Postman](#test-api-with-postman)
+* [Project Setup](#project-setup)
+* [Development](#development)
+* [Tools](#tools)
 
 ## Prerequisites
 
 * [Ruby](https://www.ruby-lang.org/en/downloads/)
-* [Hanami](https://guides.hanamirb.org/introduction/getting-started/)
+* [Ruby on Rails](http://guides.rubyonrails.org/getting_started.html)
 * [RVM](https://rvm.io/)
-* [PostgreSQL](https://www.postgresql.org/docs/)
+* [PostgreSQL DB](https://www.postgresql.org/docs/)
 
-## Setup
+## Project Setup
 
-How to run tests:
+* For production, you need to replace the asterisk with the URL of your client-side application in ./config/initializers/cors.rb file.
+
+1.  Clone or download this repo
+2.  Run `bundle install`
+3.  Run `rake db:create`
+4.  Run `bin/rails db:migrate RAILS_ENV=development`
+5.  Run `bin/rails db:seed RAILS_ENV=development`
+6.  Run `brew install overmind` (for MacOS users)
+7.  Run `overmind start`
+8.  Visit --> [http://localhost:5000/](http://localhost:5000/). That's it!.
+
+## Tools
+
+* Run `rubocop` for Ruby lint.
+* Run `rubocop -a` for fixed some issues automatically.
+* Run `reek .` for analyzing code.
+* Run `brakeman` for static analysis and for security vulnerabilities.
+* Run `rails_best_practices .` in root app directory. Helps to find unused methods, missing indexes into database tables and many other things.
+
+### Annotate (aka AnnotateModels) usage
+
+To annotate all your models, tests, fixtures, and factories:
 
 ```bash
-% bundle exec rake
+cd /path/to/app
+annotate
 ```
 
-How to run the development console:
+To annotate just your models, tests, and factories:
 
 ```bash
-% bundle exec hanami console
+annotate --exclude fixtures
 ```
 
-How to run the development server:
+To annotate just your models:
 
 ```bash
-% bundle exec hanami server
+annotate --exclude tests,fixtures,factories,serializers
 ```
 
-How to prepare (create and migrate) DB for `development` and `test` environments:
+To annotate routes.rb:
 
 ```bash
-% bundle exec hanami db prepare
-
-% HANAMI_ENV=test bundle exec hanami db prepare
+annotate --routes
 ```
 
-## Resources
+To remove model/test/fixture/factory/serializer annotations:
 
-Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.hanamirb.org/1.3.0/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸
+```bash
+annotate --delete
+```
 
-## Deployment
+To remove routes.rb annotations:
 
-* Mainly for Heroku hosting.
-* See [documentation](./DEPLOYMENT.md).
+```bash
+annotate --routes --delete
+```
+
+To automatically annotate every time you run db:migrate, either run rails g annotate:install or add Annotate.load_tasks to your `Rakefile`. See the configuration in Rails section for more info.
