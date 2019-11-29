@@ -33,5 +33,10 @@ module Flick
         resource '*', headers: :any, expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'], methods: [:get, :post, :delete, :put, :options]
       end
     end
+
+    # All times in UTC, defaults to the Eastern timezone when displaying the values, and applies optimistic locking
+    config.active_record.default_timezone = :utc
+    config.time_zone = 'Eastern Time (US & Canada)'
+    config.active_record.lock_optimistically = true
   end
 end
