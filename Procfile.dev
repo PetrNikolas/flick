@@ -1,1 +1,1 @@
-web: bin/rails s -p 5000
+web: ./bin/rails server

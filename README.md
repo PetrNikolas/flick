@@ -79,3 +79,7 @@ annotate --routes --delete
 ```
 
 To automatically annotate every time you run db:migrate, either run rails g annotate:install or add Annotate.load_tasks to your `Rakefile`. See the configuration in Rails section for more info.
+
+## Deployment
+
+Doc for this is [here.](./DEPLOYMENT.md)
