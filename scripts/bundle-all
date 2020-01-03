@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+
+for path in $(find . -maxdepth 2 -name Gemfile); do
+  (
+    echo $path;
+    cd $(dirname $path);
+    echo "bundle $@";
+    bundle $@;
+  )
+done
