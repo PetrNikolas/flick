@@ -31,6 +31,13 @@ Flick is a Rails development platform to generate, develop and deploy web applic
 7. Run `overmind start`
 8. Visit --> [http://localhost:5000/](http://localhost:5000/). That's it!.
 
+### Maybe you need start postgres server
+
+`brew services start postgresql`
+
+Or, if you don't want/need a background service you can just run:
+`pg_ctl -D /usr/local/var/postgres start`
+
 ## Tools
 
 - Run `rubocop` for Ruby lint.
