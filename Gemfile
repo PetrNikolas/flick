@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -61,6 +63,12 @@ group :development do
 
   # Annotate Rails classes with schema and routes info
   gem 'annotate'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'rspec-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -27,9 +27,11 @@ Flick is a Rails development platform to generate, develop and deploy web applic
 3. Run `rake db:create`
 4. Run `bin/rails db:migrate RAILS_ENV=development`
 5. Run `bin/rails db:seed RAILS_ENV=development`
-6. Run `brew install overmind` (for MacOS users)
-7. Run `overmind start`
-8. Visit --> [http://localhost:5000/](http://localhost:5000/). That's it!.
+6. Run `chmod +x scripts/*.bash`
+7. Run `./scripts/install-hooks.bash`
+8. Run `brew install overmind` (for MacOS users)
+9. Run `overmind start`
+10. Visit --> [http://localhost:5000/](http://localhost:5000/). That's it!.
 
 ### Maybe you need start postgres server
 
