@@ -11,11 +11,11 @@ module Api
         end
 
         def render_error(status, model)
-          render json: {success: false, error: ErrorSerializer.serialize(model.errors)}, status: status
+          render json: { success: false, error: ErrorSerializer.serialize(model.errors) }, status: status
         end
 
         def not_found
-          render json: {success: false, error: "Not found"}, status: :not_found
+          render json: { success: false, error: "Not found" }, status: :not_found
         end
       end
     end

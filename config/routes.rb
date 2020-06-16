@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   # API endpoints
-  scope "/api", module: :api, defaults: {format: :json}, constraints: AuthConstraint.new(token: "OllBS57MeAW041dgR7xolpZaiO87kjnMVVK3qrtgtTbcBolB7K3TugZBuM6") do
+  scope "/api", module: :api, defaults: { format: :json }, constraints: AuthConstraint.new(token: "OllBS57MeAW041dgR7xolpZaiO87") do
     # Version 1 of API
     scope "/v1", module: :v1 do
       # resources :news
