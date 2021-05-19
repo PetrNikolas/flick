@@ -107,7 +107,8 @@ GEM
     pg (1.1.4)
     psych (3.1.0)
     public_suffix (4.0.5)
-    puma (3.12.2)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-cors (1.1.0)
       rack (>= 2.0.0)
@@ -226,7 +227,7 @@ DEPENDENCIES
   database_cleaner
   listen (~> 3.0.5)
   pg
-  puma (~> 3.0)
+  puma (~> 4.3)
   rack-cors
   rails (~> 5.0.7, >= 5.0.7.2)
   rails_best_practices
